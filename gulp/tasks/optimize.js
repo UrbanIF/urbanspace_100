@@ -42,8 +42,17 @@ gulp.task('optimize', function () {
         /.block-container/,
         /.first-block/,
 
+        /.fullPage-nav/,
+        /.fullPage-slidesNav/,
+        /.scrollable/,
+        /.fullPage-tooltip/,
+
+
         /.main-block/,
         /.active/,
+
+        /.lW/,
+        /.rW/,
 
         /.tooltipster-base/,
         /.tooltipster-fade/,
@@ -59,6 +68,9 @@ gulp.task('optimize', function () {
         /.tooltipster-slide.tooltipster-slide-show/,
         /.tooltipster-slide.tooltipster-dying/,
         /.tooltipster-content-changing/,
+        /.tooltipster-arrow/,
+        /.tooltipster-arrow-left/,
+        /.tooltipster-arrow-right/,
         /.urban/,
         /.last-block/,
         /.progress-info/,

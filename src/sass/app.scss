@@ -176,7 +176,7 @@ p{
         left: 15px;
         top: 12px;
         z-index: 1;
-        height: 215px;
+        height: 245px;
         border-right: 1px solid #efefef;
     }
 }
@@ -399,12 +399,14 @@ p{
     right: 60px;
 }
 .rhombus-bg{
-    background: url("/assets/rhombus-bg.png") center center;
+    background-image: url("/assets/rhombus-bg.png");
+    background-position: center center;
     background-size: cover;
     @extend %rhombus-bgm;
 }
 .rhombus-half-bg{
-    background: url("/assets/rhombus-half-bg.png") center center;
+    background-image: url("/assets/rhombus-half-bg.png");
+    background-position: center center;
     background-size: cover;
     @extend %rhombus-bgm;
 }
