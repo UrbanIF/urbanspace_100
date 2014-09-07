@@ -1,0 +1,9 @@
+{
+  "name": "urban-space-100",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "fullPage.js": "~2.0.7",
+    "tooltipster": "latest"
+  }
+}

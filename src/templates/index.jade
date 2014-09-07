@@ -1,0 +1,254 @@
+doctype html
+html.no-js(lang='uk-UA')
+  head
+    meta(charset='utf-8')
+    title Urban Space 100
+
+    meta(name='viewport', content='width=device-width')
+    meta(name='description', content='Громадський ресторан «Urban Space 100»')
+
+    // build:css /assets/app.css
+    link(rel="stylesheet", href="/assets/app.css")
+    // endbuild
+
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,cyrillic-ext', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext', rel='stylesheet', type='text/css')
+
+
+  body
+    <!--[if lt IE 8]>
+    p.browsehappy
+      | You are using an <strong>outdated</strong> browser.
+      | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      | to improve your experience.
+    <![endif]-->
+    .scroll-down-hint
+    ul.menu#menu
+      li.active(data-menuanchor="members")
+        a(href='#members') Учасники
+      li(data-menuanchor="idea")
+        a(href='#idea') Ідея проекту
+      li(data-menuanchor="urban_space")
+        a(href='#urban_space') Urban Space
+      li(data-menuanchor="realization")
+        a(href='#realization') Реалізація
+      li(data-menuanchor="how_it_works")
+        a(href='#how_it_works') Як це працює
+      li(data-menuanchor="get_involved")
+        a(href='#get_involved') Долучитися
+      li(data-menuanchor="partners")
+        a(href='#partners') Партнери
+      li(data-menuanchor="contacts")
+        a(href='#contacts') Контакти
+      li(data-menuanchor="faq")
+        a(href='#faq') FAQ
+    #wrapper
+      a#nav-toggle(href="#")
+        span
+      #fullpage
+        .section.s1
+
+          .popup_overlay
+            .add-popup
+              // BEGIN content from server
+              .close
+              .popup-header
+                h2 Долучайся до проекту
+                p Заповніть форму зворотнього зв’язку, щоб дізнатись більше про проект або стати його учасником
+              .popup-body(data-type='form')
+                form#AddForm(action='https://docs.google.com/forms/d/1tk3I8ExUe5BcEKy4NJ88AGKDSTiEaSjV1uQhzphdCZo/formResponse', method='post')
+                  .form-group
+                    label
+                      input(checked='checked', data-switch='one', name='entry.1328820890', type='radio', value='стати учасником')
+                      | Хочу стати учасником проекту
+                    label
+                      input(name='entry.1328820890', type='radio', data-switch='two', value='дізнатись більше')
+                      | Хочу дізнатись більше про проект
+                  .form-group
+                    input#Name(data-val='true', data-val-required='The Name field is required.', name='entry.946888395', placeholder='Імя, Прізвище', type='text', value='', required="true")
+                  .form-group
+                    input#Phone.small(name='entry.1553324525', placeholder='Телефон', type='text', value='', required="true")
+                    input#Email.small(name='entry.1791943059', placeholder='Електропошта', type='email', value='', required="true")
+                    span або
+                  .separator
+                    span.text-notes(style='display: inline;', data-switch='one',) Моя мотивація
+                    span.text-notes(style='display: none;',  data-switch='two',)   Мої питання
+                  .form-group
+                    textarea#Notes(cols='20', name='entry.1924729487', rows='2', required="true")
+                  .form-end
+                    a.facebook-link(href='https://www.facebook.com/urbanspace100', target='_blank') facebook спільнота
+                    button#AddPopupBtn.submit-btn Надіслати
+              // SUCCESS BODY
+              .popup-body(style='display: none;', data-type='success')
+                h2 Повідомлення надіслано
+                .form-end
+                  a.facebook-link(href='https://www.facebook.com/urbanspace100')
+                  button.submit-btn.close-btn Закрити
+
+              // END content from server
+
+
+
+        .section.s2
+          .logo-white
+          .rhombus-bg
+          .rhombus-text-block
+            h2
+              .arrow_box.left(data-menuanchor="members")
+                a(href='#members')
+              | ідея проекту
+            p Створити громадський ресторан в Івано-Франківську у форматі «Urban Space», що стане успішним прикладом об’єднання громади навколо спільної ідеї. Унікальність проекту в тому, що прибуток ресторану направляється виключно на реалізацію громадських проектів міста.
+            p Засновниками є 100 соціально активних людей, яких об’єднує ідея якісного розвитку міського простору.
+
+        .section.s3
+          .logo-white
+          .bg-slider
+            .bg-slide1
+            .bg-slide2
+            .bg-slide3
+            .bg-slide4
+          .text-block
+            h2
+              .arrow_box.left(data-menuanchor="members")
+                a(href='#members')
+              | urban space
+            p Сучасний формат на перетині різних міських середовищ. Ресторан, в якому можна не лише поїсти, а й поспілкуватись, обговорити ідеї, знайти однодумців. А ще почитати книгу, придбати щось в крамниці, яка працює в ресторані, чи організувати власну презентацію.
+            p Це своєрідне місце зустрічі урбаністів&nbsp;&mdash; тих, хто вважає, що місто має бути комфортним для життя: зеленим, екологічним, відповідним до інтересів громади.
+
+        .section.s4
+          .logo-white
+          .rhombus-bg
+          .rhombus-text-block
+            h2
+              .arrow_box.left(data-menuanchor="members")
+                a(href='#members')
+              | реалізація
+            p 100 засновників ресторану в рівних долях фінансують відкриття ресторану Urban&nbsp;Space&nbsp;100.
+            p Розробку концепції, реалізацію проекту та відкриття закладу здійснює компанія «23&nbsp;ресторани».
+            p Відкриття закладу заплановано на&nbsp;1&nbsp;жовтня&nbsp;2014&nbsp;року.
+
+        .section.s5
+          .logo-black
+          .rhombus-half-bg
+          .rhombus-text-block
+            h2
+              .arrow_box.left(data-menuanchor="members")
+                a(href='#members')
+              | як це працює
+            p Ресторан працює та генерує прибуток, який направляється виключно на реалізацію громадських проектів, що розвивають та покращують міське середовище Івано-Франківська.
+            p Рішення про те, які проекти підтримати, приймають акціонери.
+            p Операційне управління Urban&nbsp;Space&nbsp;100 забезпечує компанія «23&nbsp;Ресторани».
+
+        .section.s6
+          .get_involved
+            .get_involved_description
+              h2
+                .arrow_box.left(data-menuanchor="members")
+                  a(href='#members')
+                | долучитися
+                span.plus(data-menuanchor="members")
+                  a(href='#members') +
+
+              p Підтримай проект та стань співзасновником ресторану <br> Urban Space 100.
+            .black_circle.get_likes
+              p збери три лайки від діючих учасників
+            .black_circle.pay_money
+              p зроби  внесок в розмірі 1000&nbsp;долл.
+            .black_circle.make_good
+              p роби місто кращим
+
+
+
+
+
+        .section.s9
+          .partners
+            h2.partners_title
+              .arrow_box.left(data-menuanchor="members")
+                a(href='#partners')
+              | партнери
+
+            .partners_wrap
+              #partners-wrap
+              #partners-pager.partners-pager
+
+
+        .section.s7
+          .logo-white
+          .text-block
+            h2
+              .arrow_box.left(data-menuanchor="members")
+                a(href='#members')
+              | контакти
+            p
+              strong Юлія Ляхович
+              | &nbsp;&mdash; координатор проекту
+              br
+              | 050 665 14 65
+              br
+              a(href="mailto:julia.l@warm.if.ua") julia.l@warm.if.ua
+
+        div.section.s8
+          .section-faq
+            h2 faq
+            ol.faq
+              li
+                h3 Як стати учасником проекту?
+                p Для участі у проекті потрібно отримати три позитивних рекомендації від діючих учасників проекту, погодитись на відкриту участь у ньому та внести одноразовий благодійний внесок у розмірі 1000&nbsp;у.о.
+              li
+                h3 Хто не може бути співвласником ресторану?
+                p Співвласником ресторану не може бути анонімна особа чи суб’єкт господарської діяльності, зареєстрований як юридична особа.
+              li
+                h3 Чи можна робити внесок у  кілька етапів?
+                p Так, можна розподілити суму внеску на три рівні частини, і сплатити її протягом трьох місяців, але не пізніше 15 листопада 2014 року.
+              li
+                h3 Що таке «відкрита участь»?
+                p Погодившись підтримати проект, ви погоджуєтесь на те, що ваша участь у проекті буде відома іншим. Зокрема, ваше фото, прізвище та ім’я будуть розміщені на головній сторінці сайту проекту з-поміж інших засновників. Анонімна участь у проекті неможлива.
+              li
+                h3 Що буде в разі, якщо проект себе вичерпає?
+                p Це може статись лише в разі настання неприбутковості проекту, що є маловірогідним. Тим не менш, управлінська компанія «23 Ресторани» гарантує забезпечення діяльності Urban Space 100 протягом мінімум двох років з моменту відкриття.
+              li
+                h3 Чи потрібно буде ще додатково щось фінансувати?
+                p Ні, цього не передбачається.
+              li
+                h3 Яким чином розприділяються прибутки?
+                p Щокварталу безпосередньо у приміщенні ресторану відбуватимуться збори 100 засновників, які і вирішуватимуть, на які проекти направляти зароблені за звітний період кошти. Рішення приймаються простою більшістю від загальної кількості присутніх на зборах. Згідно статуту ГО «Тепле Місто», зароблені рестораном кошти можуть направлятись винятково на громадські проекти з розвитку міста.
+          .footer
+            span
+              .arrow_box.bottom(data-menuanchor="members")
+                a(href='#members') на початок
+            a.webmil-logo(href='http://webmil.eu') webmil
+            span.if-logo Зроблено в Івано-Франківську
+
+
+    .tooltip-container
+      .tooltip
+        h5 name
+        span.title title
+        .links
+          a.facebook(href='#') facebook
+          a.twitter(href='#') twitter
+          a.google(href='#') google
+          a.tumblr(href='#') tumblr
+          a.instagram(href='#') instagram
+
+
+
+    // build:js /assets/app.js
+    script(src="../bower_components/jQuery/dist/jquery.min.js")
+    script(src="../bower_components/fullPage.js/vendors/jquery.easings.min.js")
+    script(src="../bower_components/fullPage.js/vendors/jquery.slimscroll.min.js")
+    script(src="../bower_components/fullPage.js/jquery.fullPage.js")
+    script(src="../bower_components/tooltipster/js/jquery.tooltipster.min.js")
+    script(src="/assets/app.js")
+    // endbuild
+
+  //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+  //-
+    script
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
