@@ -3,7 +3,7 @@ module.exports = ->
   $el = $('#partners-wrap')
   $pager = $('#partners-pager')
 
-  
+
 
   partners = []
   blocksNumber = 0
@@ -24,7 +24,7 @@ module.exports = ->
     $this.addClass('active')
 
 
-  # partners = [{link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}]  
+  # partners = [{link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}, {link: '#', img: '/assets/sprite.png'}]
 
 
   draw = ->
@@ -33,17 +33,22 @@ module.exports = ->
     #hack to get width
     c = ''
     for scr in [0..10]
-      c  +=  "<div class='partner empty'></div>" 
+      c  +=  "<div class='partner empty'></div>"
     $el.html(c)
-    wh = $el.width() 
+    wh = $el.width()
 
-    rows = ww // 210
-    cols = wh // 210
+    if $(window).width() > 1200
+      rows = ww // 210
+      cols = wh // 210
+    else
+      rows = ww // 110
+      cols = wh // 110
 
 
-    blocksNumber = rows * cols 
+
+    blocksNumber = rows * cols
     screensNumber = Math.ceil( partners.length / blocksNumber )
-    if screensNumber == 0 
+    if screensNumber == 0
       screensNumber = 1
 
     drawScreen()
@@ -61,23 +66,26 @@ module.exports = ->
       content +=  "<a class='partner' href='#{partner.link}'><img src='#{partner.img}'></a>"
 
     for i in [0...emptyBlocks]
-      content +=  "<div class='partner empty'></div>"      
+      content +=  "<div class='partner empty'></div>"
 
     console.log partners, curPartners, emptyBlocks
 
-    $el.html(content)    
+    $el.html(content)
 
 
 
   drawPager = ->
     content = ''
-    
+
     unless screensNumber == 1
       for scr in [0...screensNumber]
         content +=  "<div data-page='#{scr}' class='pager-item #{if scr == screen then 'active'}'></div>"
 
     $pager.html content
-    $pager.css 'margin-left', ($el.width() - cols * 210) / 2 + 5 + 'px'
+    if $(window).width() > 1200
+      $pager.css 'margin-left', ($el.width() - cols * 210) / 2 + 5 + 'px'
+    else
+      $pager.css 'margin-left', ($el.width() - cols * 110) / 2 + 5 + 'px'
 
 
 
