@@ -3,6 +3,8 @@ module.exports = ->
   $el = $('#partners-wrap')
   $pager = $('#partners-pager')
 
+  criticalWidth = 1400
+
 
 
   partners = []
@@ -37,7 +39,7 @@ module.exports = ->
     $el.html(c)
     wh = $el.width()
 
-    if $(window).width() > 1200
+    if $(window).width() > criticalWidth
       rows = ww // 210
       cols = wh // 210
     else
@@ -82,7 +84,7 @@ module.exports = ->
         content +=  "<div data-page='#{scr}' class='pager-item #{if scr == screen then 'active'}'></div>"
 
     $pager.html content
-    if $(window).width() > 1200
+    if $(window).width() > criticalWidth
       $pager.css 'margin-left', ($el.width() - cols * 210) / 2 + 5 + 'px'
     else
       $pager.css 'margin-left', ($el.width() - cols * 110) / 2 + 5 + 'px'
@@ -98,7 +100,3 @@ module.exports = ->
   }).then (_partners)->
     partners = _partners
     draw()
-
-
-
-
